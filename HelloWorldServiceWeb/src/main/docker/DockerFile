@@ -1,3 +1,12 @@
+ENV MAVEN_VERSION=3.5.0
+
+# Install maven
+RUN wget --quiet http://mirror.vorboss.net/apache/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && tar zxf apache-maven-${MAVEN_VERSION}-bin.tar.gz
+
+ENV MAVEN_HOME=/app/apache-maven-${MAVEN_VERSION}
+
+RUN ${MAVEN_HOME}/bin/mvn clean compile package install
+
 FROM frolvlad/alpine-oraclejdk8:slim
 VOLUME /tmp
 ADD hello-world-service-web-0.0.1-SNAPSHOT.jar app.jar
