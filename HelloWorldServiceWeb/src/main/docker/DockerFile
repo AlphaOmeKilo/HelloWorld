@@ -1,3 +1,7 @@
+
+# Install wget (for Maven install)
+RUN apt-get update && apt-get install -y wget
+
 ENV MAVEN_VERSION=3.5.0
 
 # Install maven
