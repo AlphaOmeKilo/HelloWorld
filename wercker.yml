@@ -26,8 +26,8 @@ build:
           mvn clean install
 
 deploy:
-   steps:
-     -script:
-       name: echo 
-       code: |
-         echo hello
+  steps:
+    -script:
+      name: echo 
+      code: |
+       echo hello
