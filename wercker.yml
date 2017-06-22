@@ -24,3 +24,10 @@ build:
         name: Maven Execution
         code: |
           mvn clean install
+
+deploy:
+   steps:
+     -script:
+       name: echo 
+       code: |
+         echo hello
