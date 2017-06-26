@@ -1,0 +1,14 @@
+box: maven:latest
+build:
+  steps:
+    - script:
+        name: Maven Execution
+        code: |
+          mvn clean install
+
+deploy:
+  steps:
+    - script:
+        name: Maven Version
+        code: |
+          mvn -version
