@@ -12,6 +12,6 @@ docker-push:
         username: $USERNAME
         password: $PASSWORD
         tag: latest
-        repository: ocmicrodemo/ocmicrodemo
+        repository: ocmicrodemo/helloworld
         registry: https://registry.hub.docker.com
         cmd: java -jar  /pipeline/source/HelloWorldServiceWeb/target/hello-world-service-web-0.0.1-SNAPSHOT.jar
