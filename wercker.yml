@@ -6,7 +6,7 @@ build:
         code: |
           mvn clean install
 
-deploy:
+docker-push:
   steps:
     - internal/docker-push:
         username: $USERNAME
