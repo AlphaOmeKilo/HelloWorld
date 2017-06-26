@@ -8,7 +8,9 @@ build:
 
 deploy:
   steps:
-    - script:
-        name: Maven Version
-        code: |
-          mvn -version
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: latest
+        repository: ocmicrodemo/ocmicrodemo
+        registry: https://registry.hub.docker.com
